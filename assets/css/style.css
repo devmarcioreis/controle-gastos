@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+/*==========Google Fonts==========*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+/*==========Root==========*/
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.266), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow: inset 10px 10px 1px rgba(248, 248, 248, 0.048), 
+    5px 10px 20px rgba(0, 0, 0, 0.151), 
+    5px 2px 1px rgba(255, 249, 249, 0), 
+    inset -10px -10px 15px rgba(255, 255, 255, 0.034);
+  --principal-font: 'Rubik', sans-serif;
+  --light-color: #fff;
+  --dark-color: #000;
+  --line-color: #F65A83;
+  --text-color: #333;
+}
+
+/*==========Reset CSS==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/*==========Body==========*/
+body {
+  font-family: var(--principal-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/*==========Controle de despesas==========*/
+.expenses__container {
+  margin: 2rem auto;
+  width: 22rem;
+  box-shadow: var(--shadow);
+  padding: 1rem .5rem;
+  border-radius: .5rem;
+}
+.expenses__container h1 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.expenses__container .inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+}
+.expenses__container .inc-exp-container div {
+  margin-right: .2rem;
+  text-align: center;
+  width: 100%;
+}
+.expenses__container .inc-exp-container .credit {
+  background: #7FB77E;
+  color: var(--light-color);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+.expenses__container .inc-exp-container .debt {
+  background: #F65A83;
+  color: var(--light-color);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+.expenses__container .inc-exp-container .balance-content {
+  background: #3B9AE1;
+  color: var(--light-color);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+.expenses__container .money.plus, .money.minus, .balance {
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  margin: 1rem auto;
+}
+.expenses__container h3 {
+  border-bottom: 2px solid var(--line-color);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  padding-bottom: .2rem;
+}
+.expenses__container form {
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  border-radius: .5rem;
+}
+.expenses__container form label {
+  display: inline-block;
+  margin: .5rem auto;
+}
+.expenses__container form .control input[type='text'], input[type='number'] {
+  border: none;
+  border-radius: .2rem;
+  font-size: .9rem;
+  display: block;
+  padding: .5rem;
+  width: 100%;
+}
+.expenses__container .btn {
+  background: var(--line-color);
+  color: var(--light-color);
+  border-radius: 5rem;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  border: 0;
+  display: block;
+  font-size: 1rem;
+  margin: 2rem auto 1rem auto;
+  padding: .8rem;
+  cursor: pointer;
+  transition: all .7s ease;
+}
+.expenses__container .btn:hover {
+  background: var(--background-color);
+}
+.expenses__container .btn:focus, .delete-btn:focus {
+  outline: 0;
+}
+.expenses__container .transactions {
+  padding: 0;
+  margin: 2rem .5rem;
+}
+.expenses__container .transactions li {
+  background-color: var(--light-color);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem;
+  margin: .5rem 0;
+}
+.expenses__container .transactions li.plus {
+  border-right: .2rem solid #7FB77E;
+  border-left: .2rem solid #7FB77E;
+  color: #7FB77E;
+}
+.expenses__container .transactions li.minus {
+  border-right: .2rem solid #F65A83;
+  border-left: .2rem solid #F65A83;
+  color: #F65A83;
+}
+.expenses__container .delete-btn {
+  background: transparent;
+  border: none;
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  padding: .3rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  cursor: pointer;
+}

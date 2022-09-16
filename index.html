@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--========JavaScript========-->
+  <script src="assets/js/script.js" defer></script>
+  <!--========CSS========-->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Controle de gastos</title>
+</head>
+
+<body>
+
+  <!--========Controle de despesas========-->
+    <div class="expenses__container">
+      <h1>Controle de gastos</h1>
+      <div class="inc-exp-container">
+        <div class="credit">
+          <h4>Receitas</h4>
+          <p id="money-plus" class="money plus">+ R$0.00</p>
+        </div>
+        <div class="debt">
+          <h4>Despesas</h4>
+          <p id="money-minus" class="money minus">- R$0.00</p>
+        </div>
+        <div class="balance-content">
+          <h4>Saldo</h4>
+          <p id="balance" class="balance">R$ 0.00</p>
+        </div>
+      </div>
+      <h3>Transações</h3>
+      <ul id="transactions" class="transactions"></ul>
+      <h3>Adicionar transação</h3>
+
+      <form id="form">
+        <div class="control">
+          <label for="text">Nome da transação:</label>
+          <input autofocus type="text" id="text" placeholder="digite o nome..." />
+        </div>
+        <div class="control">
+          <label for="amount">Valor da transação<br />
+          </label>
+          <input type="text" id="amount" placeholder="ex: 10 ou -10" />
+        </div>
+        <button class="btn">Adicionar</button>
+      </form>
+    </div>
+
+</body>
+</html>
